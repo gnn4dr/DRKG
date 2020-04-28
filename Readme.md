@@ -58,6 +58,26 @@ The following table shows the number of triplets between different entity-type p
 | \(Compound, Side Effect\)         | \-         | \-     | 138944   | \-      | \-     | \-    | \-           | 138944             |
 | Total                                 | 1419822    | 335370 | 2250197  | 1496708 | 256151 | 26290 | 84756        | 5869294            |
 
+## Installation
+Before using notebooks here (especially training the knowledge graph embedding yourself), you need to install some dependencies:
+
+### Install PyTorch
+Currently all notebooks use PyTorch as Deep Learning backend.
+```
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+```
+
+### Install DGL
+Currently we use the newest stable version of DGL.
+```
+conda install -c dglteam dgl-cuda10.1
+```
+
+### Install DGL-KE
+Currently we use the newest stable version of DGL-KE.
+```
+sudo pip3 install dglke
+```
 
 ## DRKG with DGL
 We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
