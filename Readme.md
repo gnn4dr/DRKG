@@ -59,29 +59,60 @@ The following table shows the number of triplets between different entity-type p
 | Total                                 | 1419822    | 335370 | 2250197  | 1496708 | 256151 | 26290 | 84756        | 5869294            |
 
 
+## Installation
+Before using notebooks here (especially training the knowledge graph embedding yourself), you need to install some dependencies:
+
+### Install PyTorch
+Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
+```
+sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Install DGL
+Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
+```
+sudo pip3 install dgl-cu101
+```
+
+### Install DGL-KE
+Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
+```
+sudo pip3 install dglke
+```
+
 ## DRKG with DGL
 We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
 The following notebook provides an example of building a heterograph from DRKG in DGL; and some examples of queries on the DGL heterograph.
- - drkg_with_dgl/loading_drkg_in_dgl.ipynb
- 
+ - COVID-19-KG/drkg_with_dgl/loading_drkg_in_dgl.ipynb
+
 ## Basic Graph Analysis of DRKG
 We analyzed directly the structure of the extracted DRKG. Since the datasources may contain related information, we want to verify that combining the edge information from different sources is meaningful.
 
-To evaluate the structural similarity among a pair of relation types we compute their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient. This analysis is given under raw_graph_analysis directory:
+To evaluate the structural similarity among a pair of relation types we compute their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient. This analysis is given in
  - Jaccard_scores_among_all_edge_types_in_DRKG.ipynb
+
 
 ## Knowledge Graph Embedding Based Analysis of DRKG
 
-We analyze the extracted DRKG by learning a TransE KGE model that utilizes the $\ell_2$ distance. As DRKG combines information from different data sources, we want to verify that meaningful entity and relation embeddings can be generated using knowledge graph embedding technology.
+We analyze the extracted DRKG by learning a TransE KGE model that utilizes the ![$\ell_2$](https://render.githubusercontent.com/render/math?math=%24%5Cell_2%24) distance. As DRKG combines information from different data sources, we want to verify that meaningful entity and relation embeddings can be generated using knowledge graph embedding technology.
 
-We split the edge triplets in training, validation and test sets as follows $90\%$, $5\%$, and $5\%$ and train the KGE model. Finally, we obtain the entity and relation embeddings for the DRKG. The training, validation and test sets can be found in the DRKG data file as well as the trained embeddings.
+We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model. Finally, we obtain the entity and relation embeddings for the DRKG. The training, validation and test sets can be found in the DRKG data file as well as the trained embeddings.
 
-Knowledge graph embedding based analysis methodologies are all under embedding_analysis directory.
+Knowledge graph embedding based analysis methodologies are all under embedding_analyisis directory.
  - Train_embeddings.ipynb, showing how to training a knowledge graph embedding using DGL-KE toolkit.
  - Relation_similarity_analysis.ipynb, analyzing the generate relation embedding similarity.
  - Entity_similarity_analysis.ipynb, analyzing the generate entity embedding similarity.
  - Edge_score_analysis.ipynb, evaluating whether the learned KGE model can predict the edges of DRGK
  - Edge_similarity_based_on_link_recommendation_results.ipynb, evaluating how similar are the predicted links among different relation types.
- 
- ## Licence
+
+## Cite
+
+## Licence
 This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
+
+
+
+
+```python
+
+```
