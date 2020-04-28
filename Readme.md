@@ -14,6 +14,28 @@ You can directly download drkg by following commands:
 wget https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz
 ```
 
+### DRKG dataset
+The whole dataset contains three part:
+ - drkg.tsv, a tsv file containg the original drkg in the format of (h, r, t) triplets.
+ - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set.
+ - entity2src.tsv, a directory mapping entities in drkg to their original sources.
+
+### Pretrained DRKG embedding
+The DRKG mebedding is trained using TransE\_l2 model with dimention size of 400, there are four files:
+
+ - DRKG\_TransE\_l2\_entity.npy, NumPy binary data, storing the entity embedding
+ - DRKG\_TransE\_l2\_relation.npy, NumPy binary data, storing the relation embedding
+ - entities.tsv, mapping from entity\_name to tentity\_id.
+ - relations.tsv, mapping from relation\_name to relation\_id
+
+To use the pretrained embedding, one can use np.load to load the entity embeddings and relation embeddings separately:
+
+```
+import numpy as np
+entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
+rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
+```
+
 ## Statistics of DRKG
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table. 
 
@@ -62,20 +84,20 @@ The following table shows the number of triplets between different entity-type p
 Before using notebooks here, you need to install some dependencies:
 
 ### Install PyTorch
-Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [PyTorch](https://pytorch.org/)
+Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
 ```
 sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### Install DGL (Optional)
-If you want to analyze DRKG with DGL with notebooks in [DRKG with DGL](#drkg-with-dgl), you need to install DGL package.
-Currently we use the newest stable version of DGL. For install other version of DGL please goto [DGL](https://docs.dgl.ai/en/latest/install/index.html)
+If you want to analyze DRKG with DGL with notebooks at [drkg-with-dgl], you need to install DGL package.
+Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
 ```
 sudo pip3 install dgl-cu101
 ```
 
 ### Install DGL-KE (Optional)
-If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) in [Knowledge Graph Embedding Based Analysis of DRKG](#knowledge-graph-embedding-based-analysis-of-drkg), you need to install DGL as in [Install DGL (Optional)](#install-dgl-optional) and install DGL-KE package here.
+If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) at [knowledge-graph-embedding-based-analysis-of-drkg], you need to install DGL as in [install-dgl-optional] and install DGL-KE package here.
 Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
 ```
 sudo pip3 install dglke
