@@ -40,45 +40,45 @@ rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table. 
 
 | Entity type         | Drugbank | GNBR  | Hetionet | STRING | IntAct | DGIdb | Bibliography | Total Entities |
-|---------------------|----------|-------|----------|--------|--------|-------|--------------|----------------|
+|:--------------------|---------:|------:|---------:|-------:|-------:|------:|-------------:|---------------:|
 | Anatomy             | \-       | \-    | 400      | \-     | \-     | \-    | \-           | 400            |
-| Atc                 | 4048     | \-    | \-       | \-     | \-     | \-    | \-           | 4048           |
-| Biological Process  | \-       | \-    | 11381    | \-     | \-     | \-    | \-           | 11381          |
-| Cellular Component  | \-       | \-    | 1391     | \-     | \-     | \-    | \-           | 1391           |
-| Compound            | 9708     | 11961 | 1538     | \-     | 153    | 6348  | 6250         | 24313          |
-| Disease             | \-       | 4747  | 257      | \-     | \-     | \-    | 33           | 4920           |
-| Gene                | 4973     | 27111 | 19145    | 18316  | 16321  | 2551  | 3181         | 39220          |
-| Molecular Function  | \-       | \-    | 2884     | \-     | \-     | \-    | \-           | 2884           |
-| Pathway             | \-       | \-    | 1822     | \-     | \-     | \-    | \-           | 1822           |
+| Atc                 | 4,048     | \-    | \-       | \-     | \-     | \-    | \-           | 4,048           |
+| Biological Process  | \-       | \-    | 11,381    | \-     | \-     | \-    | \-           | 11,381          |
+| Cellular Component  | \-       | \-    | 1,391     | \-     | \-     | \-    | \-           | 1,391           |
+| Compound            | 9,708     | 11,961 | 1,538     | \-     | 153    | 6,348  | 6,250         | 24,313          |
+| Disease             | \-       | 4,747  | 257      | \-     | \-     | \-    | 33           | 4,920           |
+| Gene                | 4,973     | 27,111 | 19,145    | 18,316  | 16,321  | 2,551  | 3,181         | 39,220          |
+| Molecular Function  | \-       | \-    | 2,884     | \-     | \-     | \-    | \-           | 2,884           |
+| Pathway             | \-       | \-    | 1,822     | \-     | \-     | \-    | \-           | 1,822           |
 | Pharmacologic Class | \-       | \-    | 345      | \-     | \-     | \-    | \-           | 345            |
-| Side Effect         | \-       | \-    | 5701     | \-     | \-     | \-    | \-           | 5701           |
+| Side Effect         | \-       | \-    | 5,701     | \-     | \-     | \-    | \-           | 5,701           |
 | Symptom             | \-       | \-    | 415      | \-     | \-     | \-    | \-           | 415            |
 | Tax                 | \-       | 215   | \-       | \-     | \-     | \-    | \-           | 215            |
-| Total               | 18729    | 44034 | 45279    | 18316  | 16474  | 8899  | 9464         | 97055          |
+| Total               | 18,729    | 44,034 | 45,279    | 18,316  | 16,474  | 8,899  | 9,464         | 97,055          |
 
 
 The following table shows the number of triplets between different entity-type pairs in DRKG for DRKG and various datasources.
 
 | Entity\-type pair                     | Drugbank | GNBR   | Hetionet | STRING  | IntAct | DGIdb | Bibliography | Total interactions |
-|---------------------------------------|------------|--------|----------|---------|--------|-------|--------------|--------------------|
-| \(Gene, Gene\)                    | \-         | 66722  | 474526   | 1496708 | 254346 | \-    | 58629        | 2350931            |
-| \(Compound, Gene\)                | 24801      | 80803  | 51429    | \-      | 1805   | 26290 | 25666        | 210794             |
-| \(Disease, Gene\)                 | \-         | 95400  | 27977    | \-      | \-     | \-    | 461          | 123838             |
-| \(Atc, Compound\)                 | 15750      | \-     | \-       | \-      | \-     | \-    | \-           | 15750              |
-| \(Compound, Compound\)            | 1379271    | \-     | 6486     | \-      | \-     | \-    | \-           | 1385757            |
-| \(Compound, Disease\)             | \-         | 77782  | 1145     | \-      | \-     | \-    | \-           | 78927              |
-| \(Gene, Tax\)                     | \-         | 14663  | \-       | \-      | \-     | \-    | \-           | 14663              |
-| \(Biological Process, Gene\)      | \-         | \-     | 559504   | \-      | \-     | \-    | \-           | 559504             |
-| \(Disease, Symptom\)              | \-         | \-     | 3357     | \-      | \-     | \-    | \-           | 3357               |
-| \(Anatomy, Disease\)              | \-         | \-     | 3602     | \-      | \-     | \-    | \-           | 3602               |
+|:--------------------------------------|-----------:|-------:|---------:|--------:|-------:|------:|-------------:|-------------------:|
+| \(Gene, Gene\)                    | \-         | 66,722  | 474,526   | 1,496,708 | 254,346 | \-    | 58,629        | 2,350,931            |
+| \(Compound, Gene\)                | 24,801      | 80,803  | 51,429    | \-      | 1,805   | 26,290 | 25,666        | 210,794             |
+| \(Disease, Gene\)                 | \-         | 95,400  | 27,977    | \-      | \-     | \-    | 461          | 123,838             |
+| \(Atc, Compound\)                 | 15,750      | \-     | \-       | \-      | \-     | \-    | \-           | 15,750              |
+| \(Compound, Compound\)            | 1,379,271    | \-     | 6,486     | \-      | \-     | \-    | \-           | 1,385,757            |
+| \(Compound, Disease\)             | \-         | 77,782  | 1,145     | \-      | \-     | \-    | \-           | 78,927              |
+| \(Gene, Tax\)                     | \-         | 14,663  | \-       | \-      | \-     | \-    | \-           | 14,663              |
+| \(Biological Process, Gene\)      | \-         | \-     | 559,504   | \-      | \-     | \-    | \-           | 559,504             |
+| \(Disease, Symptom\)              | \-         | \-     | 3,357     | \-      | \-     | \-    | \-           | 3,357               |
+| \(Anatomy, Disease\)              | \-         | \-     | 3,602     | \-      | \-     | \-    | \-           | 3,602               |
 | \(Disease, Disease\)              | \-         | \-     | 543      | \-      | \-     | \-    | \-           | 543                |
-| \(Anatomy, Gene\)                 | \-         | \-     | 726495   | \-      | \-     | \-    | \-           | 726495             |
-| \(Gene, Molecular Function\)      | \-         | \-     | 97222    | \-      | \-     | \-    | \-           | 97222              |
-| \(Compound, Pharmacologic Class\) | \-         | \-     | 1029     | \-      | \-     | \-    | \-           | 1029               |
-| \(Cellular Component, Gene\)      | \-         | \-     | 73566    | \-      | \-     | \-    | \-           | 73566              |
-| \(Gene, Pathway\)                 | \-         | \-     | 84372    | \-      | \-     | \-    | \-           | 84372              |
-| \(Compound, Side Effect\)         | \-         | \-     | 138944   | \-      | \-     | \-    | \-           | 138944             |
-| Total                                 | 1419822    | 335370 | 2250197  | 1496708 | 256151 | 26290 | 84756        | 5869294            |
+| \(Anatomy, Gene\)                 | \-         | \-     | 726,495   | \-      | \-     | \-    | \-           | 726,495             |
+| \(Gene, Molecular Function\)      | \-         | \-     | 97,222    | \-      | \-     | \-    | \-           | 97,222              |
+| \(Compound, Pharmacologic Class\) | \-         | \-     | 1,029     | \-      | \-     | \-    | \-           | 1,029               |
+| \(Cellular Component, Gene\)      | \-         | \-     | 73,566    | \-      | \-     | \-    | \-           | 73,566              |
+| \(Gene, Pathway\)                 | \-         | \-     | 84,372    | \-      | \-     | \-    | \-           | 84,372              |
+| \(Compound, Side Effect\)         | \-         | \-     | 138,944   | \-      | \-     | \-    | \-           | 138,944             |
+| Total                                 | 1,419,822    | 335,370 | 2,250,197  | 1,496,708 | 256,151 | 26,290 | 84,756        | 5,869,294            |
 
 ## Installation
 Before using notebooks here, you need to install some dependencies:
@@ -103,21 +103,43 @@ Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL >
 sudo pip3 install dglke
 ```
 
+## Installation
+Before using notebooks here (especially training the knowledge graph embedding yourself), you need to install some dependencies:
+
+### Install PyTorch
+Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
+```
+sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Install DGL
+Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
+```
+sudo pip3 install dgl-cu101
+```
+
+### Install DGL-KE
+Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
+```
+sudo pip3 install dglke
+```
+
 ## DRKG with DGL
 We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
+
 The following notebook provides an example of building a heterograph from DRKG in DGL; and some examples of queries on the DGL heterograph:
  - [loading_drkg_in_dgl.ipynb](drkg_with_dgl/loading_drkg_in_dgl.ipynb)
  
 ## Basic Graph Analysis of DRKG
 We analyzed directly the structure of the extracted DRKG. Since the datasources may contain related information, we want to verify that combining the edge information from different sources is meaningful.
 
-To evaluate the structural similarity among a pair of relation types we compute their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient:
+To evaluate the structural similarity among a pair of relation types we compute their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient. This analysis is given in
  - [Jaccard_scores_among_all_edge_types_in_DRKG.ipynb](raw_graph_analysis/Jaccard_scores_among_all_edge_types_in_DRKG.ipynb)
 
 ## Knowledge Graph Embedding Based Analysis of DRKG
-We analyze the extracted DRKG by learning a TransE KGE model that utilizes the $\ell_2$ distance. As DRKG combines information from different data sources, we want to verify that meaningful entity and relation embeddings can be generated using knowledge graph embedding technology.
+We analyze the extracted DRKG by learning a TransE KGE model that utilizes the ![$\ell_2$](https://render.githubusercontent.com/render/math?math=%24%5Cell_2%24) distance. As DRKG combines information from different data sources, we want to verify that meaningful entity and relation embeddings can be generated using knowledge graph embedding technology.
 
-We split the edge triplets in training, validation and test sets as follows $90\%$, $5\%$, and $5\%$ and train the KGE model as shown in following notebook:
+We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model as shown in following notebook:
 - [Train_embeddings.ipynb](embedding_analysis/Train_embeddings.ipynb)
 
 Finally, we obtain the entity and relation embeddings for the DRKG. We can do various embedding based analysis as provided in the following notebooks:
@@ -128,3 +150,8 @@ Finally, we obtain the entity and relation embeddings for the DRKG. We can do va
  
  ## Licence
 This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
+
+
+```python
+
+```
