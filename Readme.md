@@ -64,13 +64,13 @@ Before using notebooks here (especially training the knowledge graph embedding y
 ### Install PyTorch
 Currently all notebooks use PyTorch as Deep Learning backend.
 ```
-conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### Install DGL
 Currently we use the newest stable version of DGL.
 ```
-conda install -c dglteam dgl-cuda10.1
+sudo pip3 install dgl-cu101
 ```
 
 ### Install DGL-KE
