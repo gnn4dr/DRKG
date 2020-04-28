@@ -98,11 +98,11 @@ We analyze the extracted DRKG by learning a TransE KGE model that utilizes the !
 We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model. Finally, we obtain the entity and relation embeddings for the DRKG. The training, validation and test sets can be found in the DRKG data file as well as the trained embeddings.
 
 Knowledge graph embedding based analysis methodologies are all under embedding_analyisis directory.
- - [Train_embeddings.ipynb](embedding_analyisis/Train_embeddings.ipynb), showing how to training a knowledge graph embedding using DGL-KE toolkit.
- - [Relation_similarity_analysis.ipynb](embedding_analyisis/Relation_similarity_analysis.ipynb), analyzing the generate relation embedding similarity.
- - [Entity_similarity_analysis.ipynb](embedding_analyisis/Entity_similarity_analysis.ipynb), analyzing the generate entity embedding similarity.
- - [Edge_score_analysis.ipynb](embedding_analyisis/Edge_score_analysis.ipynb), evaluating whether the learned KGE model can predict the edges of DRGK
- - [Edge_similarity_based_on_link_recommendation_results.ipynb](embedding_analyisis/Edge_similarity_based_on_link_recommendation_results.ipynb), evaluating how similar are the predicted links among different relation types.
+ - [Train_embeddings.ipynb](embedding_analysis/Train_embeddings.ipynb), showing how to training a knowledge graph embedding using DGL-KE toolkit.
+ - [Relation_similarity_analysis.ipynb](embedding_analysis/Relation_similarity_analysis.ipynb), analyzing the generate relation embedding similarity.
+ - [Entity_similarity_analysis.ipynb](embedding_analysis/Entity_similarity_analysis.ipynb), analyzing the generate entity embedding similarity.
+ - [Edge_score_analysis.ipynb](embedding_analysis/Edge_score_analysis.ipynb), evaluating whether the learned KGE model can predict the edges of DRGK
+ - [Edge_similarity_based_on_link_recommendation_results.ipynb](embedding_analysis/Edge_similarity_based_on_link_recommendation_results.ipynb), evaluating how similar are the predicted links among different relation types.
 
 ## Cite
 
