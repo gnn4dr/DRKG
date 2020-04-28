@@ -62,20 +62,20 @@ The following table shows the number of triplets between different entity-type p
 Before using notebooks here, you need to install some dependencies:
 
 ### Install PyTorch
-Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
+Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [PyTorch](https://pytorch.org/)
 ```
 sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### Install DGL (Optional)
-If you want to analyze DRKG with DGL with notebooks at [drkg-with-dgl], you need to install DGL package.
-Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
+If you want to analyze DRKG with DGL with notebooks in [#drkg-with-dgl], you need to install DGL package.
+Currently we use the newest stable version of DGL. For install other version of DGL please goto [DGL](https://docs.dgl.ai/en/latest/install/index.html)
 ```
 sudo pip3 install dgl-cu101
 ```
 
 ### Install DGL-KE (Optional)
-If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) at [knowledge-graph-embedding-based-analysis-of-drkg], you need to install DGL as in [install-dgl-optional] and install DGL-KE package here.
+If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) in [#knowledge-graph-embedding-based-analysis-of-drkg], you need to install DGL as in [install-dgl-optional] and install DGL-KE package here.
 Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
 ```
 sudo pip3 install dglke
