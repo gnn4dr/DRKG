@@ -103,27 +103,6 @@ Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL >
 sudo pip3 install dglke
 ```
 
-## Installation
-Before using notebooks here (especially training the knowledge graph embedding yourself), you need to install some dependencies:
-
-### Install PyTorch
-Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
-```
-sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-### Install DGL
-Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
-```
-sudo pip3 install dgl-cu101
-```
-
-### Install DGL-KE
-Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
-```
-sudo pip3 install dglke
-```
-
 ## DRKG with DGL
 We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
 
