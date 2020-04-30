@@ -126,10 +126,15 @@ Finally, we obtain the entity and relation embeddings for the DRKG. We can do va
  - [Entity_similarity_analysis.ipynb](embedding_analysis/Entity_similarity_analysis.ipynb), analyzing the generate entity embedding similarity.
  - [Edge_score_analysis.ipynb](embedding_analysis/Edge_score_analysis.ipynb), evaluating whether the learned KGE model can predict the edges of DRGK
  - [Edge_similarity_based_on_link_recommendation_results.ipynb](embedding_analysis/Edge_similarity_based_on_link_recommendation_results.ipynb), evaluating how similar are the predicted links among different relation types.
- 
- ## Licence
-This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
 
+## Drug Repurposing Using Pretrained Model for COVID-19
+We present an example of using pretrained DRKG model for drug repurposing for COVID-19. In the example, we directly use the pretrined model provided at [DRKG dataset](#drkg-dataset) and proposed 100 drugs for COVID-19. The following notebook provides the details:
+
+ - [COVID-19_drug_repurposing.ipynb](drug_repurpose/COVID-19_drug_repurposing.ipynb)
+
+ 
+## Licence
+This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
 
 ```python
 
