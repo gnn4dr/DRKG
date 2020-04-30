@@ -4,7 +4,7 @@ The following table provides the licenses for resources contributing nodes or ed
 |   | Resource | License | Source |
 | --- | -------- | ------- | ------ |
 | 1 | DrugBank| [Creative Common’s Attribution-NonCommercial 4.0 International License.](http://creativecommons.org/licenses/by-nc/4.0/legalcode) | [drugbank](https://www.drugbank.ca/) |
-| 2 | GNBR | [Creative Common’s Attribution-NonCommercial 4.0 International License.] | [GNBR](https://zenodo.org/record/1134693#.XqZLZpMza8U) |
+| 2 | GNBR | [Creative Common’s Attribution-NonCommercial 4.0 International License.](http://creativecommons.org/licenses/by-nc/4.0/legalcode) | [GNBR](https://zenodo.org/record/1134693#.XqZLZpMza8U) |
 | 3 | Hetionet | [Mixed License](https://github.com/hetio/hetionet#License) | [Hetionet](https://het.io/) |
 | 4 | String | [Creative Common’s Attribution-NonCommercial 4.0 International License.](http://creativecommons.org/licenses/by-nc/4.0/legalcode) | [String](https://string-db.org/) |
 | 5 | IntAct | Apache License, Version 2.0 | [IntAct](https://www.ebi.ac.uk/intact/) |
