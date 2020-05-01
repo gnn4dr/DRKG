@@ -97,7 +97,7 @@ rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
 
 
 ## Tools to analyze DRKG
-We provide notebooks to analyze DRKG with some deep learning frameworks. Before using the notebooks, you need to install the deep learning frameworks:
+We analyze DRKG with some deep learning frameworks, including [DGL](https://github.com/dmlc/dgl) (a framework for graph neural networks) and [DGL-KE](https://github.com/awslabs/dgl-ke) (a library for computing knowledge graph embeddings). Please follow the instructions below to install the deep learning frameworks.
 
 ### Install PyTorch
 Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
