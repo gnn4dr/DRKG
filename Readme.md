@@ -8,34 +8,6 @@ Drug Repurposing Knowledge Graph (DRKG) is a comprehensive biological knowledge 
   <b>Figure</b>: Interactions in the DRKG. The number next to an edge indicates the number of relation-types for that entity-pair in DRKG.
 </p>
 
-## Download DRKG
-You can directly download drkg by following commands:
-```
-wget https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz
-```
-
-### DRKG dataset
-The whole dataset contains three part:
- - drkg.tsv, a tsv file containg the original drkg in the format of (h, r, t) triplets.
- - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set. 
- - entity2src.tsv, a directory mapping entities in drkg to their original sources.
-
-### Pretrained DRKG embedding
-The DRKG mebedding is trained using TransE\_l2 model with dimention size of 400, there are four files:
-
- - DRKG\_TransE\_l2\_entity.npy, NumPy binary data, storing the entity embedding
- - DRKG\_TransE\_l2\_relation.npy, NumPy binary data, storing the relation embedding
- - entities.tsv, mapping from entity\_name to tentity\_id.
- - relations.tsv, mapping from relation\_name to relation\_id
- 
-To use the pretrained embedding, one can use np.load to load the entity embeddings and relation embeddings separately:
-
-```
-import numpy as np
-entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
-rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
-```
-
 ## Statistics of DRKG
 The type-wise distribution of the entities in DRKG and their original data-source(s) is shown in following table. 
 
@@ -80,8 +52,52 @@ The following table shows the number of triplets between different entity-type p
 | \(Compound, Side Effect\)         | \-         | \-     | 138,944   | \-      | \-     | \-    | \-           | 138,944             |
 | Total                                 | 1,419,822    | 335,370 | 2,250,197  | 1,496,708 | 256,151 | 26,290 | 84,756        | 5,869,294            |
 
-## Installation
-Before using notebooks here, you need to install some dependencies:
+
+## Download DRKG
+To analyze DRKG, you can directly download drkg by following commands:
+```
+wget https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz
+```
+If you use our notebooks provided in this repository, you don't need to download the file manually. The notebooks can automatically download the file for you.
+
+When you untar `drkg.tar.gz`, you will see the following files:
+
+```
+./drkg.tsv
+./entity2src.tsv
+./embed
+./embed/DRKG_TransE_l2_relation.npy
+./embed/relations.tsv
+./embed/entities.tsv
+./embed/Readme.md
+./embed/DRKG_TransE_l2_entity.npy
+```
+
+### DRKG dataset
+The whole dataset contains three part:
+ - drkg.tsv, a tsv file containg the original drkg in the format of (h, r, t) triplets.
+ - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set. 
+ - entity2src.tsv, a directory mapping entities in drkg to their original sources.
+
+### Pretrained DRKG embedding
+The DRKG mebedding is trained using TransE\_l2 model with dimention size of 400, there are four files:
+
+ - DRKG\_TransE\_l2\_entity.npy, NumPy binary data, storing the entity embedding
+ - DRKG\_TransE\_l2\_relation.npy, NumPy binary data, storing the relation embedding
+ - entities.tsv, mapping from entity\_name to tentity\_id.
+ - relations.tsv, mapping from relation\_name to relation\_id
+ 
+To use the pretrained embedding, one can use np.load to load the entity embeddings and relation embeddings separately:
+
+```
+import numpy as np
+entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
+rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
+```
+
+
+## Tools to analyze DRKG
+We provide notebooks to analyze DRKG with some deep learning frameworks. Before using the notebooks, you need to install the deep learning frameworks:
 
 ### Install PyTorch
 Currently all notebooks use PyTorch as Deep Learning backend. For install other version of pytorch please goto [Install PyTorch](https://pytorch.org/)
@@ -89,33 +105,28 @@ Currently all notebooks use PyTorch as Deep Learning backend. For install other 
 sudo pip3 install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-### Install DGL (Optional)
-If you want to analyze DRKG with DGL with notebooks at [drkg-with-dgl], you need to install DGL package.
-Currently we use the newest stable version of DGL. For install other version of DGL please goto [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
+### Install DGL 
+Please install [DGL](https://www.dgl.ai/) (a framework for graph neural networks) with the following command. It installs DGL with CUDA support.
 ```
 sudo pip3 install dgl-cu101
 ```
+For installing other versions of DGL, please go to [Install DGL](https://docs.dgl.ai/en/latest/install/index.html)
 
-### Install DGL-KE (Optional)
-If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) at [knowledge-graph-embedding-based-analysis-of-drkg], you need to install DGL as in [install-dgl-optional] and install DGL-KE package here.
-Currently we use the newest stable version of DGL-KE. DGL-KE can work with DGL > 0.4.3 (either CPU or GPU)
+### Install DGL-KE
+If you want to training the model with notebooks (e.g., using Train_embeddings.ipynb or Edge_score_analysis.ipynb) at [knowledge-graph-embedding-based-analysis-of-drkg], you need to install both DGL and [DGL-KE](https://github.com/awslabs/dgl-ke) package here.
+DGL-KE can work with DGL >= 0.4.3 (either CPU or GPU)
 ```
 sudo pip3 install dglke
 ```
 
-## DRKG with DGL
-We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
+## Notebooks for analyzing DRKG
+We provide a set of notebooks to analyze DRKG. Some of the notebooks use the tools installed in the previous section.
 
-The following notebook provides an example of building a heterograph from DRKG in DGL; and some examples of queries on the DGL heterograph:
- - [loading_drkg_in_dgl.ipynb](drkg_with_dgl/loading_drkg_in_dgl.ipynb)
- 
-## Basic Graph Analysis of DRKG
-We analyzed directly the structure of the extracted DRKG. Since the datasources may contain related information, we want to verify that combining the edge information from different sources is meaningful.
-
+### Basic Graph Analysis of DRKG
 To evaluate the structural similarity among a pair of relation types we compute their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient. This analysis is given in
  - [Jaccard_scores_among_all_edge_types_in_DRKG.ipynb](raw_graph_analysis/Jaccard_scores_among_all_edge_types_in_DRKG.ipynb)
 
-## Knowledge Graph Embedding Based Analysis of DRKG
+### Knowledge Graph Embedding Based Analysis of DRKG
 We analyze the extracted DRKG by learning a TransE KGE model that utilizes the ![$\ell_2$](https://render.githubusercontent.com/render/math?math=%24%5Cell_2%24) distance. As DRKG combines information from different data sources, we want to verify that meaningful entity and relation embeddings can be generated using knowledge graph embedding technology.
 
 We split the edge triplets in training, validation and test sets as follows 90%, 5%, and 5% and train the KGE model as shown in following notebook:
@@ -127,11 +138,17 @@ Finally, we obtain the entity and relation embeddings for the DRKG. We can do va
  - [Edge_score_analysis.ipynb](embedding_analysis/Edge_score_analysis.ipynb), evaluating whether the learned KGE model can predict the edges of DRGK
  - [Edge_similarity_based_on_link_recommendation_results.ipynb](embedding_analysis/Edge_similarity_based_on_link_recommendation_results.ipynb), evaluating how similar are the predicted links among different relation types.
 
-## Drug Repurposing Using Pretrained Model for COVID-19
+### Drug Repurposing Using Pretrained Model for COVID-19
 We present an example of using pretrained DRKG model for drug repurposing for COVID-19. In the example, we directly use the pretrined model provided at [DRKG dataset](#drkg-dataset) and proposed 100 drugs for COVID-19. The following notebook provides the details:
 
  - [COVID-19_drug_repurposing.ipynb](drug_repurpose/COVID-19_drug_repurposing.ipynb)
 
+### DRKG with DGL
+We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
+
+The following notebook provides an example of building a heterograph from DRKG in DGL; and some examples of queries on the DGL heterograph:
+ - [loading_drkg_in_dgl.ipynb](drkg_with_dgl/loading_drkg_in_dgl.ipynb)
+ 
  
 ## Licence
 This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
