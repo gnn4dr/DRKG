@@ -12,3 +12,7 @@ For the 8968 "small-molecule" typed drugs, we manage to extract SMILES
 ChemSpider. The SMILES can be found in `drugbank_smiles.txt`. For the rest "small-molecule" typed drugs, SMILES is not 
 available either because their structural information is not available or because they are substances of multiple 
 ingredients.
+
+We also include the weight of compounds available in DrugBank in `drugbank_weight.txt`. For compounds whose weight 
+information is missing, we use -1 for a placeholder. The weight information is available for 7158 compounds 
+and missing for 2547 compounds.

@@ -148,8 +148,12 @@ We provide a notebook, with example of using DRKG with Deep Graph Library (DGL).
 
 The following notebook provides an example of building a heterograph from DRKG in DGL; and some examples of queries on the DGL heterograph:
  - [loading_drkg_in_dgl.ipynb](drkg_with_dgl/loading_drkg_in_dgl.ipynb)
- 
- 
+
+## Additional Information for DrugBank
+
+Some additional information about compounds from DrugBank is included in [drugbank_info](/drugbank_info), including the 
+type and weight of drugs, and the SMILES of small-molecule drugs.
+
 ## Licence
 This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
 
