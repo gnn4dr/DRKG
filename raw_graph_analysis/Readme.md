@@ -1,0 +1,2 @@
+# Basic Graph Analysis of DRKG
+Here we evaluate the structural similarity among a pair of relation types by computing their Jaccard similarity coefficient and the overlap among the two edge types via the overlap coeffcient in [Jaccard_scores_among_all_edge_types_in_DRKG.ipynb](Jaccard_scores_among_all_edge_types_in_DRKG.ipynb)

@@ -1,0 +1,2 @@
+# Query Basic DRKG Graph Information with DGL
+Here we show how to load DRKG dataset into a heterograph in DGL and give several examples of queries on investigating the graph structure of DRKG in [loading_drkg_in_dgl.ipynb](loading_drkg_in_dgl.ipynb).
