@@ -65,6 +65,7 @@ When you untar `drkg.tar.gz`, you will see the following files:
 ```
 ./drkg.tsv
 ./entity2src.tsv
+./relation_glossary.tsv
 ./embed
 ./embed/DRKG_TransE_l2_relation.npy
 ./embed/relations.tsv
@@ -74,10 +75,11 @@ When you untar `drkg.tar.gz`, you will see the following files:
 ```
 
 ### DRKG dataset
-The whole dataset contains three part:
+The whole dataset contains four part:
  - drkg.tsv, a tsv file containg the original drkg in the format of (h, r, t) triplets.
  - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set. 
- - entity2src.tsv, a directory mapping entities in drkg to their original sources.
+ - entity2src.tsv, a file mapping entities in drkg to their original sources.
+ - relation_glossary.tsv, a file containing rge glossary of the relations in DRKG, and other associated information with sources (if available).
 
 ### Pretrained DRKG embedding
 The DRKG mebedding is trained using TransE\_l2 model with dimention size of 400, there are four files:
