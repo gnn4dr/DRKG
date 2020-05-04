@@ -18,7 +18,7 @@ The type-wise distribution of the entities in DRKG and their original data-sourc
 | Biological Process  | \-       | \-    | 11,381    | \-     | \-     | \-    | \-           | 11,381          |
 | Cellular Component  | \-       | \-    | 1,391     | \-     | \-     | \-    | \-           | 1,391           |
 | Compound            | 9,708     | 11,961 | 1,538     | \-     | 153    | 6,348  | 6,250         | 24,313          |
-| Disease             | \-       | 4,747  | 257      | \-     | \-     | \-    | 33           | 4,920           |
+| Disease             | 1,182     | 4,746  | 257      | \-     | \-     | \-    | 33           | 5,103           |
 | Gene                | 4,973     | 27,111 | 19,145    | 18,316  | 16,321  | 2,551  | 3,181         | 39,220          |
 | Molecular Function  | \-       | \-    | 2,884     | \-     | \-     | \-    | \-           | 2,884           |
 | Pathway             | \-       | \-    | 1,822     | \-     | \-     | \-    | \-           | 1,822           |
@@ -26,7 +26,7 @@ The type-wise distribution of the entities in DRKG and their original data-sourc
 | Side Effect         | \-       | \-    | 5,701     | \-     | \-     | \-    | \-           | 5,701           |
 | Symptom             | \-       | \-    | 415      | \-     | \-     | \-    | \-           | 415            |
 | Tax                 | \-       | 215   | \-       | \-     | \-     | \-    | \-           | 215            |
-| Total               | 18,729    | 44,034 | 45,279    | 18,316  | 16,474  | 8,899  | 9,464         | 97,055          |
+| Total               | 19,911   | 44,033 | 45,279    | 18,316  | 16,474  | 8,899  | 9,464         | 97,238          |
 
 
 The following table shows the number of triplets between different entity-type pairs in DRKG for DRKG and various datasources.
