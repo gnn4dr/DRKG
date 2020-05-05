@@ -165,8 +165,9 @@ Please cite our dataset if you use this code and data in your work.
 
 ```
 @misc{drkg2020,
-  author = {Ioannidis, Vassilis N. and Song, Xiang and Manchanda,Saurav and Li, Mufei and Pan, Xiaoqin and Zheng, Da and Ning, Xia and Zeng, Xiangxiang and Karypis, George},
-  title = {{Drug Repurposing Knowledge Graph (DRKG)}},
+  author = {Ioannidis, Vassilis N. and Song, Xiang and Manchanda,Saurav and Li, Mufei and Pan, Xiaoqin
+            and Zheng, Da and Ning, Xia and Zeng, Xiangxiang and Karypis, George},
+  title = {DRKG - Drug Repurposing Knowledge Graph for Covid-19},
   howpublished = "\url{https://github.com/gnn4dr/DRKG/}",
   year = {2020}
 }
