@@ -159,6 +159,19 @@ type and weight of drugs, and the SMILES of small-molecule drugs.
 ## Licence
 This project is licensed under the Apache-2.0 License. However, the DRKG integrates data from many resources and users should consider the licensing of each source (see this [table](https://github.com/shuix007/COVID-19-KG/blob/master/licenses/Readme.md)) . We apply a license attribute on a per node and per edge basis for sources with defined licenses. 
 
+## Cite
+
+Please cite our dataset if you use this code and data in your work.
+
+@misc{drkg2020,
+  author = {Ioannidis, Vassilis N. and Song, Xiang and Manchanda,Saurav and Li, Mufei and Pan, Xiaoqin and Zheng, Da and Ning, Xia and Zeng, Xiangxiang and Karypis, George},
+  title = {{Drug Repurposing Knowledge Graph (DRKG)}},
+  howpublished = "\url{https://github.com/gnn4dr/DRKG/}",
+  year = {2020}
+}
+
+A preprint describing this work will be available soon.
+
 ```python
 
 ```
