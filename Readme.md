@@ -163,9 +163,7 @@ This project is licensed under the Apache-2.0 License. However, the DRKG integra
 
 Please cite our dataset if you use this code and data in your work.
 
-```python
-
-
+```
 @misc{drkg2020,
   author = {Ioannidis, Vassilis N. and Song, Xiang and Manchanda,Saurav and Li, Mufei and Pan, Xiaoqin and Zheng, Da and Ning, Xia and Zeng, Xiangxiang and Karypis, George},
   title = {{Drug Repurposing Knowledge Graph (DRKG)}},
