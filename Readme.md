@@ -76,7 +76,7 @@ When you untar `drkg.tar.gz`, you will see the following files:
 
 ### DRKG dataset
 The whole dataset contains four part:
- - drkg.tsv, a tsv file containg the original drkg in the format of (h, r, t) triplets.
+ - drkg.tsv, a tsv file containing  the original drkg in the format of (h, r, t) triplets.
  - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set. 
  - entity2src.tsv, a file mapping entities in drkg to their original sources.
  - relation_glossary.tsv, a file containing rge glossary of the relations in DRKG, and other associated information with sources (if available).
@@ -141,7 +141,7 @@ Finally, we obtain the entity and relation embeddings for the DRKG. We can do va
  - [Edge_similarity_based_on_link_recommendation_results.ipynb](embedding_analysis/Edge_similarity_based_on_link_recommendation_results.ipynb), evaluating how similar are the predicted links among different relation types.
 
 ### Drug Repurposing Using Pretrained Model for COVID-19
-We present an example of using pretrained DRKG model for drug repurposing for COVID-19. In the example, we directly use the pretrined model provided at [DRKG dataset](#drkg-dataset) and proposed 100 drugs for COVID-19. The following notebook provides the details:
+We present an example of using pretrained DRKG model for drug repurposing for COVID-19. In the example, we directly use the pretrained model provided at [DRKG dataset](#drkg-dataset) and proposed 100 drugs for COVID-19. The following notebook provides the details:
 
  - [COVID-19_drug_repurposing.ipynb](drug_repurpose/COVID-19_drug_repurposing.ipynb)
 
