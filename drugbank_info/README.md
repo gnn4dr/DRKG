@@ -8,7 +8,7 @@ characterized as "Biotech" typed drugs in DrugBank. A full list of them are sepa
 and `drugbank_biotech.txt`.
 
 For the 8968 "small-molecule" typed drugs, we manage to extract SMILES 
-(The simplified molecular-input line-entry system) for 8646 of them from DrugBank, PubChem, KEGG, ChEMBL, and 
+(The simplified molecular-input line-entry system) for 8837 of them from DrugBank, PubChem, KEGG, ChEMBL, and 
 ChemSpider. The SMILES can be found in `drugbank_smiles.txt`. For the rest "small-molecule" typed drugs, SMILES is not 
 available either because their structural information is not available or because they are substances of multiple 
 ingredients.
