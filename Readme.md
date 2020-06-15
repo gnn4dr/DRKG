@@ -72,12 +72,16 @@ When you untar `drkg.tar.gz`, you will see the following files:
 ./embed/entities.tsv
 ./embed/Readme.md
 ./embed/DRKG_TransE_l2_entity.npy
+./embed/mol_contextpred.npy
+./embed/mol_masking.npy
+./embed/mol_infomax.npy
+./embed/mol_edgepred.npy
 ```
 
 ### DRKG dataset
 The whole dataset contains four part:
  - drkg.tsv, a tsv file containing  the original drkg in the format of (h, r, t) triplets.
- - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set. 
+ - embed, a folder containing the pretrained Knowledge Graph Embedding using the entire drkg.tsv as the training set and pretrained GNN-based molecule embeddings from [molecule SMILES](./drugbank_info/drugbank_smiles.txt)
  - entity2src.tsv, a file mapping entities in drkg to their original sources.
  - relation_glossary.tsv, a file containing rge glossary of the relations in DRKG, and other associated information with sources (if available).
 
@@ -97,6 +101,20 @@ entity_emb = np.load('./embed/DRKG_TransE_l2_entity.npy')
 rel_emb = np.load('./embed/DRKG_TransE_l2_relation.npy')
 ```
 
+### Pretrained Molecule Embedding
+
+We also provide molecule embeddings for most small-molecule drugs in DrugBank using pre-trained GNNs. In particular, 
+[Strategies for Pre-training Graph Neural Networks](https://arxiv.org/abs/1905.12265) develops multiple approaches for 
+pre-training GNN-based molecular representations, combining supervised molecular property prediction with 
+self-supervised learning approaches. We employ their method to compute four variants of molecule embeddings 
+using [DGL-LifeSci](https://github.com/awslabs/dgl-lifesci/tree/master/examples/molecule_embeddings).
+
+- `mol_contextpred.npy`: From a model pre-trained to predict surrounding graph structures of molecular subgraphs
+- `mol_infomax.npy`: From a model pre-trained to maximize the mutual information between local node representations 
+and a global graph representation
+- `mol_edgepred.npy`: From a model pre-trained to encourage nearby nodes to have similar representations and enforcing 
+disparate notes to have distinct representations
+- `mol_masking.npy`: From a model pre-trained to predict randomly masked node and edge attributes
 
 ## Tools to analyze DRKG
 We analyze DRKG with some deep learning frameworks, including [DGL](https://github.com/dmlc/dgl) (a framework for graph neural networks) and [DGL-KE](https://github.com/awslabs/dgl-ke) (a library for computing knowledge graph embeddings). Please follow the instructions below to install the deep learning frameworks.
