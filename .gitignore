@@ -1,1 +1,9 @@
 .idea
+/alternative_datasources/ckpts/
+/alternative_datasources/train_crude_drkg/
+/alternative_datasources/train_DGIDB/
+/alternative_datasources/train_Hetionet/
+/alternative_datasources/train_DRUGBANK/
+/alternative_datasources/train_GNBR/
+/data/
+/alternative_datasources/train_ref_drkg/
