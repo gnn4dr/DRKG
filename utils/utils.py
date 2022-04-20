@@ -8,8 +8,7 @@ def download_and_extract():
     url = "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/DRKG/drkg.tar.gz"
     path = "../data/"
     filename = "drkg.tar.gz"
-    fn = os.path.join(path, filename)
-    if os.path.exists("../data/drkg/drkg.tsv"):
+    if os.path.exists(os.path.join(path, filename)):
         return
     
     opener, mode = tarfile.open, 'r:gz'
@@ -18,9 +17,8 @@ def download_and_extract():
     os.chdir(path)
     while True:
         try:
-            file = opener(filename, mode)
-            try: file.extractall()
-            finally: file.close()
+            with opener(filename, mode) as file:
+                file.extractall()
             break
         except Exception:
             f_remote = requests.get(url, stream=True)
